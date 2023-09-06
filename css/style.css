@@ -2772,13 +2772,6 @@ width: 100%;
     height: fit-content;
   }
 
-  .video-bites-main-frame:hover .heading-and-supporting-text {
-
-
-    display: none;
-
-  }
-
 
 
   .video-bites-gallery .content-column {
@@ -2793,10 +2786,7 @@ width: 100%;
     transform: none !important;
   }
 
-  .video-bites-main-frame {
-    display: none !important;
-  }
-  
+
   .video-bites-top {
     margin-bottom: 0;
     padding-top: 48px;
