@@ -476,6 +476,7 @@ a {
   height: auto !important;
   flex-direction: row !important;
   position: relative !important;
+margin: auto !important;
 }
 
 .row-32 {
@@ -3120,7 +3121,7 @@ display: flex;
 
 .tp-24-top-agenda {
   align-items: flex-start;
-  background-color: rgb(20 26 32 / 50%);
+  /* background-color: rgb(20 26 32 / 50%); */
   border-radius: 12px;
   display: flex;
   flex: 1;
@@ -3134,10 +3135,12 @@ display: flex;
   transition: all 0.15s ease-out;
   padding: 8px;
   position: relative;
-  backdrop-filter: blur(48px);
+  /* backdrop-filter: blur(48px); */
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin: -1px;
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+   /* margin: -1px; */
+
+   
 
 
 }
@@ -3493,18 +3496,27 @@ transition: all 0.15s ease-out;
 }
 
 .tp-24-top-agenda.warning-card {
-  border: 1px solid var(--docebo-primary500);
-  background: hsl(216deg 100% 50% / 20%);
-  color: white !important;
-  padding: 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  width: calc(100% / 1.5);
+    /* border: 1px solid var(--docebo-primary500); */
+    /* background: hsl(216deg 100% 50% / 20%); */
+    color: white !important;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: calc(100% / 1.5);
+    justify-content: space-between;
+    width: 100% !important;
+    color: black !important;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible !important;
+    box-shadow: none;
+    margin: auto;
 }
 
 .tp-24-top-agenda.warning-card .docebo-text-large-regular {
   color: inherit !important;
+  margin: auto;
 }
 
 .beginner-black.hero .docebo-display-large-semi-bold {
