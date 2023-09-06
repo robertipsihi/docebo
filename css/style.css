@@ -2503,7 +2503,7 @@ border-radius: 2px;
 
 .video-bites-main-frame {
   display: flex;
-  width: 100%;
+  width: 75%;
   aspect-ratio: 16/9;
   padding: 0;
   flex-direction: column;
@@ -2763,13 +2763,20 @@ width: 100%;
 
 }
 
-@media only screen and (max-width: 56em) {
+@media only screen and (max-width: 40em) {
 
   .video-bites-top .grid-32,
   .video-bites-gallery .grid-32 {
     display: flex;
     flex-direction: column;
     height: fit-content;
+  }
+
+  .video-bites-main-frame:hover .heading-and-supporting-text {
+
+
+    display: none;
+
   }
 
 
@@ -2786,7 +2793,10 @@ width: 100%;
     transform: none !important;
   }
 
-
+  .video-bites-main-frame {
+    width: 100% !important;
+  }
+  
   .video-bites-top {
     margin-bottom: 0;
     padding-top: 48px;
@@ -2859,7 +2869,7 @@ display: block;
 
 .tp-24-top .video-bites-main-frame {
   display: flex;
-  width: 100%;
+  width: 75%;
   aspect-ratio: 16/9;
   padding: 0;
   flex-direction: column;
