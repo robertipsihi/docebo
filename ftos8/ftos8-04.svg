@@ -1,0 +1,33 @@
+<svg width="192" height="256" viewBox="0 0 192 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3">
+<mask id="mask0_3656_6395" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-256" y="-256" width="512" height="512">
+<circle r="256" fill="url(#paint0_radial_3656_6395)"/>
+</mask>
+<g mask="url(#mask0_3656_6395)">
+<path d="M192 32L0 32" stroke="white" stroke-linejoin="round"/>
+<path d="M192 64L0 64" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M192 96L0 96" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M192 128L0 128" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M192 160L0 160" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M192 192L0 192" stroke="white" stroke-linejoin="round"/>
+<path d="M192 224L0 224" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M32 0V256" stroke="white" stroke-linejoin="round"/>
+<path d="M64 0V256" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M96 0V256" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M128 0V256" stroke="white" stroke-linejoin="round"/>
+<path d="M160 0V256" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+</g>
+<path d="M128 112H96V70.627L64 102.627V128H128V192H96V160H32V89.373L89.373 32H128V112Z" fill="url(#paint1_linear_3656_6395)"/>
+<path d="M128 112V112.5H128.5V112H128ZM96 112H95.5V112.5H96V112ZM96 70.627H96.5V69.4198L95.6464 70.2734L96 70.627ZM64 102.627L63.6464 102.273L63.5 102.42V102.627H64ZM64 128H63.5V128.5H64V128ZM128 128H128.5V127.5H128V128ZM128 192V192.5H128.5V192H128ZM96 192H95.5V192.5H96V192ZM96 160H96.5V159.5H96V160ZM32 160H31.5V160.5H32V160ZM32 89.373L31.6464 89.0195L31.5 89.1659V89.373H32ZM89.373 32V31.5H89.1659L89.0195 31.6464L89.373 32ZM128 32H128.5V31.5H128V32ZM128 112V111.5H96V112V112.5H128V112ZM96 112H96.5V70.627H96H95.5V112H96ZM96 70.627L95.6464 70.2734L63.6464 102.273L64 102.627L64.3536 102.981L96.3536 70.9805L96 70.627ZM64 102.627H63.5V128H64H64.5V102.627H64ZM64 128V128.5H128V128V127.5H64V128ZM128 128H127.5V192H128H128.5V128H128ZM128 192V191.5H96V192V192.5H128V192ZM96 192H96.5V160H96H95.5V192H96ZM96 160V159.5H32V160V160.5H96V160ZM32 160H32.5V89.373H32H31.5V160H32ZM32 89.373L32.3536 89.7266L89.7266 32.3536L89.373 32L89.0195 31.6464L31.6464 89.0195L32 89.373ZM89.373 32V32.5H128V32V31.5H89.373V32ZM128 32H127.5V112H128H128.5V32H128Z" fill="white"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_3656_6395" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(90) scale(256)">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="white" stop-opacity="0.6"/>
+</radialGradient>
+<linearGradient id="paint1_linear_3656_6395" x1="80" y1="32" x2="80" y2="192" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.1"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
