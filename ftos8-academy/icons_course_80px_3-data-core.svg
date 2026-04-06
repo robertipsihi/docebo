@@ -1,0 +1,23 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M74 62V68C74 71.3137 71.3137 74 68 74H12C8.68629 74 6 71.3137 6 68V12C6 8.68629 8.68629 6 12 6H68C71.3137 6 74 8.68629 74 12V50" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="10" y="10" width="60" height="60" rx="2" fill="url(#paint0_linear_3480_30013)"/>
+<path d="M18 6V2" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M62 6V2" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 6V2" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 78V74" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M62 78V74" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 78V74" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 18L6 18" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74 18L78 18" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 40H6" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74 40H78" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 62H6" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 42L18 36V32M40 42L62 36V24M40 42L40 30M62 24L40 30M62 24L40 18L18 24L40 30" stroke="#0066FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 62L18 56V44L40 50M40 62L62 56V52M40 62L40 50M62 44L40 50" stroke="#0066FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_3480_30013" x1="40" y1="10" x2="40" y2="70" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D6E3FA" stop-opacity="0.8"/>
+<stop offset="1" stop-color="#D6E3FA" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

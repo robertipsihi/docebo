@@ -1,0 +1,10 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M66.0002 16.6667V8C66.0002 4.6863 63.314 2 60.0002 2H8.00024C4.68654 2 2.00024 4.68629 2.00024 8V22H14.0002V72C14.0002 75.3137 16.6865 78 20.0002 78H60.0002C63.314 78 66.0002 75.3137 66.0002 72V63.3333" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M72 32L62 32C60.8954 32 60 32.8954 60 34V38C60 39.1046 60.8954 40 62 40L70 40C71.1046 40 72 40.8954 72 42V46C72 47.1046 71.1046 48 70 48H66M60 48H66M66 48V52M66 48L66 28" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 28L51.3333 28" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 40L51.3333 40" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 52L51.3333 52" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 16L58 16" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 64L58 64" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 8C2 4.68629 4.68629 2 8 2V2C11.3137 2 14 4.68629 14 8V22H2V8Z" stroke="black" stroke-width="4" stroke-linejoin="round"/>
+</svg>

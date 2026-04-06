@@ -1,0 +1,20 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M70 54V8C70 4.68629 67.3137 2 64 2H16C12.6863 2 10 4.68629 10 8V72C10 75.3137 12.6863 78 16 78H64C67.3137 78 70 75.3137 70 72V66" stroke="#101828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="14" y="6" width="52" height="68" rx="2" fill="url(#paint0_linear_3480_30101)"/>
+<path d="M22 16V28C22 29.1046 22.8954 30 24 30H56C57.1046 30 58 29.1046 58 28V16C58 14.8954 57.1046 14 56 14H24C22.8954 14 22 14.8954 22 16Z" stroke="#0066FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="20" y="36" width="8" height="8" rx="4" fill="#101828"/>
+<rect x="20" y="60" width="8" height="8" rx="4" fill="#101828"/>
+<rect x="20" y="48" width="8" height="8" rx="4" fill="#101828"/>
+<rect x="36" y="36" width="8" height="8" rx="4" fill="#101828"/>
+<rect x="36" y="60" width="8" height="8" rx="4" fill="#101828"/>
+<rect x="36" y="48" width="8" height="8" rx="4" fill="#101828"/>
+<rect x="52" y="36" width="8" height="8" rx="4" fill="#101828"/>
+<rect x="52" y="60" width="8" height="8" rx="4" fill="#101828"/>
+<rect x="52" y="48" width="8" height="8" rx="4" fill="#101828"/>
+<defs>
+<linearGradient id="paint0_linear_3480_30101" x1="40" y1="6" x2="40" y2="74" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D6E3FA" stop-opacity="0.8"/>
+<stop offset="1" stop-color="#D6E3FA" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
