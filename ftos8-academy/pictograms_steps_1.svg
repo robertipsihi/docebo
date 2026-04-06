@@ -1,0 +1,33 @@
+<svg width="192" height="256" viewBox="0 0 192 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3">
+<mask id="mask0_3656_6396" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-256" y="-256" width="512" height="512">
+<circle r="256" fill="url(#paint0_radial_3656_6396)"/>
+</mask>
+<g mask="url(#mask0_3656_6396)">
+<path d="M192 32L0 32" stroke="white" stroke-linejoin="round"/>
+<path d="M192 64L0 64" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M192 96L0 96" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M192 128L0 128" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M192 160L0 160" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M192 192L0 192" stroke="white" stroke-linejoin="round"/>
+<path d="M192 224L0 224" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M32 0V256" stroke="white" stroke-linejoin="round"/>
+<path d="M64 0V256" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M96 0V256" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M128 0V256" stroke="white" stroke-linejoin="round"/>
+<path d="M160 0V256" stroke="white" stroke-linejoin="round" stroke-dasharray="8 8"/>
+</g>
+<path d="M96 160H128V192H32V160H64V64H32V32H96V160Z" fill="url(#paint1_linear_3656_6396)"/>
+<path d="M96 160H95.5V160.5H96V160ZM128 160H128.5V159.5H128V160ZM128 192V192.5H128.5V192H128ZM32 192H31.5V192.5H32V192ZM32 160V159.5H31.5V160H32ZM64 160V160.5H64.5V160H64ZM64 64H64.5V63.5H64V64ZM32 64H31.5V64.5H32V64ZM32 32V31.5H31.5V32H32ZM96 32H96.5V31.5H96V32ZM96 160V160.5H128V160V159.5H96V160ZM128 160H127.5V192H128H128.5V160H128ZM128 192V191.5H32V192V192.5H128V192ZM32 192H32.5V160H32H31.5V192H32ZM32 160V160.5H64V160V159.5H32V160ZM64 160H64.5V64H64H63.5V160H64ZM64 64V63.5H32V64V64.5H64V64ZM32 64H32.5V32H32H31.5V64H32ZM32 32V32.5H96V32V31.5H32V32ZM96 32H95.5V160H96H96.5V32H96Z" fill="white"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_3656_6396" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(90) scale(256)">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="white" stop-opacity="0.6"/>
+</radialGradient>
+<linearGradient id="paint1_linear_3656_6396" x1="80" y1="32" x2="80" y2="192" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.1"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
