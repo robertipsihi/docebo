@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,49 +9,44 @@
   <link rel="stylesheet" href="css/utility.css">
   <link rel="stylesheet" href="css/dex.css">
 </head>
-
 <body>
-  <main>
-    <section class="dex-section">
-      <div class="dex-wrapper">
-        <div class="dex-glass dex-glass-card">
-          <div class="dex-glass-glow"></div>
-          <div class="dex-glass-streak"></div>
-          <div class="dex-conic-border"><div class="dex-conic-border-inner"></div></div>
-          <div class="dex-logo">
-            <img class="dex-ftos" src="img/dex_ftos_logo_20px.svg" alt="FintechOS">
-            <span class="dex-logo-text"><span>Dex</span></span>
-          </div>
-          <ul class="dex-stack" id="dexStack">
-            <li class="dex-card" data-depth="0">
-              <div class="dex-content" id="dexContent">
-                <div class="dex-bubble">
-                  <span class="dex-typed" id="dexTyped"></span>
-                  <span class="dex-cursor" id="dexCursor">|</span>
-                </div>
-                <div class="dex-options">
-                  <button class="dex-new-chat-btn"><img class="dex-icon-add" src="img/dex_icons_12px_add.svg" alt=""><span>New chat</span></button>
-                  <button class="dex-send-btn" aria-label="Send">
-                    <img class="dex-icon-arrow" src="img/dex_icons_12px_arrow-up.svg" alt="">
-                    <div class="dex-dots">
-                      <div class="dex-dot"></div>
-                      <div class="dex-dot"></div>
-                      <div class="dex-dot"></div>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <!-- ...other cards... -->
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-  <script src="js/dex.js"></script>
-</body>
+<main>
 
-</html>
+<!-- Dex Carousel Section -->
+<section class="dex-section">
+  <div class="dex-wrapper">
+
+    <!-- Glass outer card -->
+    <div class="dex-glass dex-glass-card">
+      <div class="dex-glass-glow"></div>
+      <div class="dex-glass-streak"></div>
+      <div class="dex-conic-border"><div class="dex-conic-border-inner"></div></div>
+
+      <!-- Logo -->
+      <div class="dex-logo">
+        <img class="dex-ftos" src="img/dex_ftos_logo_20px.svg" alt="FintechOS">
+        <span class="dex-logo-text"><span>Dex</span></span>
+      </div>
+
+      <!-- Card stack: 1 active + 4 backs -->
+      <ul class="dex-stack" id="dexStack">
+        <li class="dex-card" data-depth="0">
+          <div class="dex-content" id="dexContent">
+            <div class="dex-bubble">
+              <span class="dex-typed" id="dexTyped"></span>
+              <span class="dex-cursor" id="dexCursor">|</span>
+            </div>
+            <div class="dex-options">
+              <button class="dex-new-chat-btn"><img class="dex-icon-add" src="img/dex_icons_12px_add.svg" alt=""><span>New chat</span></button>
+              <button class="dex-send-btn" aria-label="Send">
+                <img class="dex-icon-arrow" src="img/dex_icons_12px_arrow-up.svg" alt="">
+                <div class="dex-dots">
+                  <div class="dex-dot"></div>
+                  <div class="dex-dot"></div>
+                  <div class="dex-dot"></div>
+                </div>
+              </button>
+            </div>
           </div>
         </li>
         <li class="dex-card" data-depth="1"></li>
@@ -86,4 +79,7 @@
   </div>
 </section>
 
-
+</main>
+<script src="js/dex.js"></script>
+</body>
+</html>
