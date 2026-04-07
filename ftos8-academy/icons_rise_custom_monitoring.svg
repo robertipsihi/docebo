@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_4092_8376" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="24" width="200" height="159">
+<circle cx="152" cy="136" r="28" stroke="white" stroke-width="8"/>
+<mask id="mask1_4092_8376" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="56" y="44" width="88" height="88">
+<path d="M80 132L144 68L120 44L56 108L80 132Z" fill="url(#paint0_linear_4092_8376)"/>
+</mask>
+<g mask="url(#mask1_4092_8376)">
+<path d="M60 112L92 80L108 96L140 64" stroke="white" stroke-width="8"/>
+</g>
+<path d="M108 64H140V96" stroke="white" stroke-width="8"/>
+<path d="M112 148H20C11.1634 148 4 140.837 4 132V88" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+<path d="M144 28H20C11.1634 28 4 35.1634 4 44V88" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+<path d="M64 172H112M100 148V172" stroke="url(#paint1_linear_4092_8376)" stroke-width="8" stroke-linejoin="round"/>
+<path d="M196 152V44C196 35.1634 188.837 28 180 28H144" stroke="url(#paint2_linear_4092_8376)" stroke-width="8" stroke-linejoin="round"/>
+<path d="M172 156L196 180" stroke="url(#paint3_linear_4092_8376)" stroke-width="8"/>
+</mask>
+<g mask="url(#mask0_4092_8376)">
+<rect width="200" height="200" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_4092_8376" x1="130.387" y1="55.3592" x2="103.16" y2="82.585" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0F62FE" stop-opacity="0"/>
+<stop offset="1" stop-color="#0F62FE"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4092_8376" x1="82" y1="148" x2="82" y2="172" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4092_8376" x1="170" y1="28" x2="170" y2="152" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint3_linear_4092_8376" x1="172" y1="156" x2="196" y2="180" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

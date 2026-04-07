@@ -1,0 +1,25 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_4092_8380" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+<mask id="mask1_4092_8380" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="60" y="16" width="92" height="108">
+<path d="M60 124H152V16H60V124Z" fill="url(#paint0_linear_4092_8380)"/>
+</mask>
+<g mask="url(#mask1_4092_8380)">
+<path d="M60 100H148" stroke="white" stroke-width="8"/>
+<path d="M60 100H68C76.8366 100 84 92.8366 84 84V44C84 35.1634 91.1634 28 100 28H148" stroke="white" stroke-width="8"/>
+</g>
+<path d="M172 76L196 100L172 124L148 100L172 76Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+<path d="M32 72L60 100L32 128L4 100L32 72Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+<path d="M60 100H68C76.8366 100 84 107.163 84 116V156C84 164.837 91.1634 172 100 172H148" stroke="white" stroke-width="8"/>
+<path d="M172 4L196 28L172 52L148 28L172 4Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+<path d="M172 148L196 172L172 196L148 172L172 148Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+</mask>
+<g mask="url(#mask0_4092_8380)">
+<rect width="200" height="200" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_4092_8380" x1="60" y1="70" x2="152" y2="70" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0F62FE" stop-opacity="0"/>
+<stop offset="0.9" stop-color="#0F62FE"/>
+</linearGradient>
+</defs>
+</svg>
