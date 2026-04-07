@@ -18,57 +18,48 @@
 
     <!-- Glass outer card -->
     <div class="dex-glass dex-glass-card">
-      <div class="dex-glass-glow"></div>
+      <div class="dex-glass-bg"></div>
       <div class="dex-glass-streak"></div>
+      <div class="dex-glass-glow"></div>
       <div class="dex-conic-border"><div class="dex-conic-border-inner"></div></div>
+      <div class="dex-glass-content">
 
-      <!-- Logo -->
-      <div class="dex-logo">
-        <img class="dex-ftos" src="img/dex_ftos_logo_20px.svg" alt="FintechOS">
-        <span class="dex-logo-text"><span>Dex</span></span>
-      </div>
+        <!-- Logo -->
+        <div class="dex-logo">
+          <img class="dex-ftos" src="img/dex_ftos_logo_20px.svg" alt="FintechOS">
+          <span class="dex-logo-text"><span>Dex</span></span>
+        </div>
 
-      <!-- Card stack: 1 active + 4 backs -->
-      <ul class="dex-stack" id="dexStack">
-        <li class="dex-card" data-depth="0">
-          <div class="dex-content" id="dexContent">
-            <div class="dex-bubble">
-              <span class="dex-typed" id="dexTyped"></span>
-              <span class="dex-cursor" id="dexCursor">|</span>
+        <!-- Card stack: 1 active + 4 backs -->
+        <ul class="dex-stack" id="dexStack">
+          <li class="dex-card" data-depth="0">
+            <div class="dex-content" id="dexContent">
+              <div class="dex-bubble">
+                <span class="dex-typed" id="dexTyped"></span>
+                <span class="dex-cursor" id="dexCursor">|</span>
+              </div>
+              <div class="dex-options">
+                <button class="dex-new-chat-btn"><img class="dex-icon-add" src="img/dex_icons_12px_add.svg" alt=""><span>New chat</span></button>
+                <button class="dex-send-btn" aria-label="Send">
+                  <img class="dex-icon-arrow" src="img/dex_icons_12px_arrow-up.svg" alt="">
+                  <div class="dex-dots">
+                    <div class="dex-dot"></div>
+                    <div class="dex-dot"></div>
+                    <div class="dex-dot"></div>
+                  </div>
+                </button>
+              </div>
             </div>
-            <div class="dex-options">
-              <button class="dex-new-chat-btn"><img class="dex-icon-add" src="img/dex_icons_12px_add.svg" alt=""><span>New chat</span></button>
-              <button class="dex-send-btn" aria-label="Send">
-                <img class="dex-icon-arrow" src="img/dex_icons_12px_arrow-up.svg" alt="">
-                <div class="dex-dots">
-                  <div class="dex-dot"></div>
-                  <div class="dex-dot"></div>
-                  <div class="dex-dot"></div>
-                </div>
-              </button>
-            </div>
-          </div>
-        </li>
-        <li class="dex-card" data-depth="1"></li>
-        <li class="dex-card" data-depth="2"></li>
-        <li class="dex-card" data-depth="3"></li>
-        <li class="dex-card" data-depth="4"></li>
-      </ul>
+          </li>
+          <li class="dex-card" data-depth="1"></li>
+          <li class="dex-card" data-depth="2"></li>
+          <li class="dex-card" data-depth="3"></li>
+          <li class="dex-card" data-depth="4"></li>
+        </ul>
+      </div><!-- /dex-glass-content -->
+    </div><!-- /dex-glass -->
 
-      <!-- Bottom progressive blur -->
-      <div class="dex-blur">
-        <div class="dex-blur-layer" data-blur="1"></div>
-        <div class="dex-blur-layer" data-blur="2"></div>
-        <div class="dex-blur-layer" data-blur="3"></div>
-        <div class="dex-blur-layer" data-blur="4"></div>
-        <div class="dex-blur-layer" data-blur="5"></div>
-        <div class="dex-blur-layer" data-blur="6"></div>
-        <div class="dex-blur-layer" data-blur="7"></div>
-        <div class="dex-blur-layer" data-blur="8"></div>
-      </div>
-    </div>
-
-    <!-- Person meta (fully outside the glass card) -->
+    <!-- Person meta (in wrapper, outside glass) -->
     <div class="dex-person" id="dexPerson">
       <div class="dex-info">
         <h3><span id="dexName">Amina</span>, <span id="dexPosition">Configuration Consultant</span></h3>
@@ -76,7 +67,7 @@
       </div>
     </div>
 
-  </div>
+  </div><!-- /dex-wrapper -->
 </section>
 
 </main>

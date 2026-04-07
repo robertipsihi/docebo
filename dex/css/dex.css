@@ -1,4 +1,7 @@
 ﻿:root {
+  /* Layout */
+  --dex-max-width: 600px;
+
   /* Spacing primitives */
   --dex-space-4: 4px;
   --dex-space-8: 8px;
@@ -111,7 +114,7 @@
   min-height: 1150px;
   overflow: hidden;
     width: 140%;
-  background: #494949;
+  background: #494949 url('../img/test-bg.png') center / cover no-repeat;
     font-family: var(--dex-font);
   user-select: none;
   -webkit-user-select: none;
@@ -121,13 +124,14 @@
 .dex-wrapper {
   display: flex;
   position: absolute;
-  bottom: 50%;
-  left: 50%;
+
   transform: translateX(-50%);
+  bottom: 20%;
+    left: 60%;
   
   flex-direction: column;
   gap: 16px;
-  max-width: 600px;
+  max-width: var(--dex-max-width);
   width: 100%;
   container-type: inline-size;
   container-name: dex-wrapper;
@@ -136,18 +140,16 @@
 /* ========= Glass Card ========= */
 .dex-glass {
   position: relative;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease;
 }
 
-.dex-glass:hover {
-  backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
+.dex-glass-card {
+  border-radius: var(--dex-cqi-12) var(--dex-cqi-12) 0 0;
+  display: grid;
+  position: relative;
 }
 
-.dex-glass::before {
-  content: "";
+.dex-glass-card::before {
+  content: '';
   position: absolute;
   inset: 0;
   border-radius: inherit;
@@ -158,17 +160,52 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+  z-index: 2;
 }
 
+
+
+.dex-glass-bg,
+.dex-glass-content {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.dex-glass-bg {
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent);
+  mask-image: linear-gradient(to bottom, #000 50%, transparent);
+  pointer-events: none;
+  z-index: 0;
+  transition: backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease;
+}
+
+.dex-glass:hover .dex-glass-bg {
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+}
+
+.dex-glass-content {
+  padding: var(--dex-cqi-8) var(--dex-cqi-8) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--dex-cqi-8);
+  position: relative;
+  z-index: 1;
+}
+
+/* -- Streak & glow -- */
 .dex-glass-streak {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-  height: 1px;
+  height: 2px;
   background: radial-gradient(50% 50% at 50% 50%, rgb(255,255,255) 0%, rgba(199,255,238,0) 100%);
-  mix-blend-mode: lighten;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -181,7 +218,6 @@
   -webkit-filter: blur(16px);
   border-radius: 100%;
   opacity: 0;
-  mix-blend-mode: lighten;
   flex: none;
   width: 80%;
   height: 20px;
@@ -197,23 +233,13 @@
 .dex-glass:hover .dex-glass-streak { opacity: 1; }
 .dex-glass:hover .dex-glass-glow { opacity: 0.2; }
 
-.dex-glass-card {
-  border-radius: var(--dex-cqi-12) var(--dex-cqi-12) 0 0;
-  box-shadow: 0 0.7cqi 8.5cqi rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.03);
-  padding: var(--dex-cqi-8) var(--dex-cqi-8) 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--dex-cqi-8);
-  position: relative;
-}
-
+/* -- Rotating conic border -- */
 @property --dex-border-angle {
   syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
 }
 
-/* -- Rotating conic border -- */
 .dex-conic-border {
   --fade-mask: linear-gradient(to bottom, #000 70%, transparent 90%);
   position: absolute;
@@ -247,64 +273,6 @@
 @keyframes dex-rotate-border {
   0%   { --dex-border-angle: 0deg; }
   100% { --dex-border-angle: 360deg; }
-}
-
-/* ========= Bottom progressive blur ========= */
-.dex-blur {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.dex-blur-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.dex-blur-layer[data-blur="1"] {
-  z-index: 1;
-  backdrop-filter: blur(0.0625px);
-  mask-image: linear-gradient(rgba(0,0,0,0) 0%, rgb(0,0,0) 12.5%, rgb(0,0,0) 25%, rgba(0,0,0,0) 37.5%);
-}
-.dex-blur-layer[data-blur="2"] {
-  z-index: 2;
-  backdrop-filter: blur(0.125px);
-  mask-image: linear-gradient(rgba(0,0,0,0) 12.5%, rgb(0,0,0) 25%, rgb(0,0,0) 37.5%, rgba(0,0,0,0) 50%);
-}
-.dex-blur-layer[data-blur="3"] {
-  z-index: 3;
-  backdrop-filter: blur(0.25px);
-  mask-image: linear-gradient(rgba(0,0,0,0) 25%, rgb(0,0,0) 37.5%, rgb(0,0,0) 50%, rgba(0,0,0,0) 62.5%);
-}
-.dex-blur-layer[data-blur="4"] {
-  z-index: 4;
-  backdrop-filter: blur(0.5px);
-  mask-image: linear-gradient(rgba(0,0,0,0) 37.5%, rgb(0,0,0) 50%, rgb(0,0,0) 62.5%, rgba(0,0,0,0) 75%);
-}
-.dex-blur-layer[data-blur="5"] {
-  z-index: 5;
-  backdrop-filter: blur(1px);
-  mask-image: linear-gradient(rgba(0,0,0,0) 50%, rgb(0,0,0) 62.5%, rgb(0,0,0) 75%, rgba(0,0,0,0) 87.5%);
-}
-.dex-blur-layer[data-blur="6"] {
-  z-index: 6;
-  backdrop-filter: blur(2px);
-  mask-image: linear-gradient(rgba(0,0,0,0) 62.5%, rgb(0,0,0) 75%, rgb(0,0,0) 87.5%, rgba(0,0,0,0) 100%);
-}
-.dex-blur-layer[data-blur="7"] {
-  z-index: 7;
-  backdrop-filter: blur(4px);
-  mask-image: linear-gradient(rgba(0,0,0,0) 75%, rgb(0,0,0) 87.5%, rgb(0,0,0) 100%);
-}
-.dex-blur-layer[data-blur="8"] {
-  z-index: 8;
-  backdrop-filter: blur(8px);
-  mask-image: linear-gradient(rgba(0,0,0,0) 87.5%, rgb(0,0,0) 100%);
 }
 
 /* -- Logo -- */
@@ -342,7 +310,7 @@
   grid-row: 1;
   grid-column: 1;
   align-self: end;
-  min-height: calc(19200cqi / var(--dex-target-width)); /* 192px */
+  min-height: calc(16800cqi / var(--dex-target-width)); /* 192px */
   background: var(--dex-card-bg-primary);
   border-radius: var(--dex-cqi-8);
   box-shadow: 0 0.35cqi 2.1cqi rgba(0,0,0,0.12);
@@ -571,6 +539,8 @@
   background: var(--dex-bg-brand);
   color: var(--dex-content-inverse);
   display: grid;
+  min-height: var(--dex-cqi-28);
+  
   place-content: center;
   cursor: pointer;
   pointer-events: auto;
