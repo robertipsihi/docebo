@@ -852,7 +852,7 @@ section.ftos8-section-composed-bottom {
 /* Simple background primitives */
 
 .ftos8-bg-transparent {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .ftos8-bg-brand {
   background-color: var(--ftos8-color-primary-500);
@@ -972,6 +972,10 @@ section.ftos8-section-composed-bottom {
   justify-content: space-between;
   gap: 16px;
   box-sizing: border-box;
+}
+
+.ftos8-testimonial-card.ftos8-card-light-outline:hover {
+  box-shadow: none;
 }
 
 .ftos8-testimonial-body {

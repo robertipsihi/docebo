@@ -290,6 +290,14 @@ right: 0;
 
 .ftos8-i-blur-2 { backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(40px); }
 
+/* Diploma section backgrounds */
+.ftos8-i-diploma-bg-technical {
+  background: linear-gradient(180deg, #000 0%, #141414 100%);
+}
+.ftos8-i-diploma-bg-business {
+  background: linear-gradient(180deg, #000 0%, #001233 100%);
+}
+
 /* Diploma iframe container */
 .ftos8-i-diploma-iframe-container {
   position: relative;
@@ -415,7 +423,35 @@ right: 0;
 }
 
 .ftos8-i-cert-faq-card-bg {
-  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/stock_support.jpg);
+  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/stock_support-2.jpg);
+}
+
+.ftos8-avatar-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff, var(--ftos8-color-blue-200));
+  flex-shrink: 0;
+}
+
+.ftos8-i-hero-sphere {
+  position: absolute;
+  bottom: -30%;
+  left: 0%;
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  animation: ftos8-sphere-drift 8s ease-in-out infinite alternate;
+}
+
+@keyframes ftos8-sphere-drift {
+  0% { left: 0%; }
+  100% { left: 40%; }
 }
 
 /* Fan cards — playful tilt + bounce */

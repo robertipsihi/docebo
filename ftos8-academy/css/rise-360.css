@@ -209,6 +209,16 @@ body {
   border: var(--ftos8-rise-cqi-2) solid var(--ftos8-rise-color-grey-350);
 }
 
+.ftos8-rise-menu-item-status-complete {
+  width: var(--ftos8-rise-cqi-18);
+  height: var(--ftos8-rise-cqi-18);
+  border-radius: 50%;
+  background-color: var(--ftos8-rise-color-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .ftos8-rise-menu-item:hover,
 .ftos8-rise-menu-item-active {
   background-color: var(--ftos8-rise-color-grey-200);
@@ -404,11 +414,25 @@ body {
 
 .ftos8-rise-diagram-label {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   color: var(--ftos8-rise-color-white);
   text-align: center;
   font-family: InterDisplay, sans-serif;
   z-index: 9;
   pointer-events: none;
+}
+
+.ftos8-rise-diagram-label--outer {
+  top: calc(var(--ftos8-rise-cqi-32) + var(--ftos8-rise-cqi-48));
+}
+
+.ftos8-rise-diagram-label--middle {
+  top: calc(var(--ftos8-rise-cqi-168) + var(--ftos8-rise-cqi-48));
+}
+
+.ftos8-rise-diagram-label--inner {
+  top: calc(var(--ftos8-rise-cqi-304) + var(--ftos8-rise-cqi-48));
 }
 
 .ftos8-rise-diagram-label strong {
@@ -480,7 +504,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-radius 0.2s ease;
   animation: ftos8-rise-orbit-counter 60s linear infinite;
   transform-origin: center center;
 }
@@ -492,6 +516,29 @@ body {
 
 .ftos8-rise-diagram-icon-card:hover {
   background: var(--ftos8-rise-color-white-alpha-15);
+  border-radius: var(--ftos8-rise-cqi-8);
+}
+
+.ftos8-rise-diagram-icon-tooltip {
+  position: absolute;
+  bottom: calc(100% + var(--ftos8-rise-cqi-8));
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  border-radius: var(--ftos8-rise-cqi-6);
+  padding: var(--ftos8-rise-cqi-4) var(--ftos8-rise-cqi-8);
+  color: var(--ftos8-rise-color-white);
+  font-family: InterDisplay, sans-serif;
+  font-weight: 900;
+  font-size: var(--ftos8-rise-font-size-cqi-14);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ftos8-rise-diagram-icon-card:hover .ftos8-rise-diagram-icon-tooltip {
+  opacity: 1;
 }
 
 .ftos8-rise-diagram-icon {

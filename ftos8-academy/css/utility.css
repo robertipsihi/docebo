@@ -115,7 +115,7 @@
 }
 
 .tw-gap-32 {
-  gap: var(--ftos8-space-32);
+  gap: var(--ftos8-space-32) !important;
 }
 
 .tw-gap-40 {
