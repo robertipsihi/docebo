@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FintechOS Certified Consultant</title>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <style>
+/* ==========================================
+   Holographic Diploma Card
+   ========================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: transparent;
+  font-family: InterDisplay, sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@property --m-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --m-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --bg-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --bg-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --r-x {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+@property --r-y {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+@property --opacity {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+.ftos8-holo-card {
+  --m-x: 50%;
+  --m-y: 50%;
+  --r-x: 0deg;
+  --r-y: 0deg;
+  --bg-x: 50%;
+  --bg-y: 50%;
+  --foil-size: 40%;
+  --opacity: 0;
+  --radius: 12px;
+  --card-aspect: 4 / 3;
+
+  position: relative;
+  isolation: isolate;
+  perspective: 1600px;
+  display: grid;
+  width: 90%;
+  transition: none;
+}
+
+.ftos8-holo-card > * {
+  grid-area: 1/1;
+}
+
+.ftos8-holo-card-inner {
+  position: relative;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  border-radius: var(--radius);
+  container-type: inline-size;
+}
+
+.ftos8-holo-card-inner > *:not(.ftos8-holo-card-bg) {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.ftos8-holo-card-bg {
+  background: #000;
+  border-radius: var(--radius);
+  aspect-ratio: var(--card-aspect);
+  width: 100%;
+}
+
+.ftos8-holo-card-content {
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translateZ(40px);
+  padding: 6.48cqi;
+  gap: 3.24cqi;
+  justify-content: center;
+}
+
+.ftos8-holo-card-logo {
+  height: auto;
+  width: 23.04cqi;
+}
+
+.ftos8-holo-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.72cqi;
+}
+
+.ftos8-holo-card-body h3 {
+  font-size: 5.76cqi;
+  line-height: 1.1;
+  font-weight: 400;
+  color: #fff;
+}
+
+.ftos8-holo-card-body p {
+  font-size: 2.45cqi;
+  line-height: 1.4;
+}
+
+.ftos8-holo-card-muted {
+  color: #ffffff70;
+}
+
+.ftos8-holo-card-muted-light {
+  color: #ffffff90;
+}
+
+.ftos8-holo-card-name {
+  font-size: 3.6cqi;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #fff;
+}
+
+.ftos8-holo-card-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.36cqi;
+}
+
+.ftos8-holo-card-signature img {
+  height: auto;
+  width: 19.44cqi;
+  margin-bottom: 0.72cqi;
+}
+
+.ftos8-holo-card-signature p {
+  font-size: 2.3cqi;
+  line-height: 1.4;
+}
+
+.ftos8-holo-card-signature p:last-child {
+  font-size: 1.94cqi;
+}
+
+.ftos8-holo-card-signature .ftos8-font-medium {
+  color: #fff;
+  font-weight: 500;
+}
+
+.ftos8-holo-card-glare {
+  transform: translateZ(10px);
+  mix-blend-mode: soft-light;
+  border-radius: var(--radius);
+  background: radial-gradient(
+    farthest-corner circle at var(--m-x) var(--m-y),
+    rgba(255, 255, 255, 0.8) 10%,
+    rgba(255, 255, 255, 0.65) 20%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  opacity: var(--opacity);
+}
+
+.ftos8-holo-card-foil {
+  transform: translateZ(20px);
+  mix-blend-mode: screen;
+  opacity: var(--opacity);
+  clip-path: inset(0 0 1px 0 round var(--radius));
+  --mask-start: 0%;
+  --mask-end: 80%;
+  -webkit-mask: linear-gradient(to right, transparent var(--mask-start), black var(--mask-end));
+  mask: linear-gradient(to right, transparent var(--mask-start), black var(--mask-end));
+
+  --step: 5%;
+  --pattern: url("https://robertipsihi.github.io/docebo/ftos8-academy/diploma_pattern.png") center / var(--foil-size);
+  --rainbow: repeating-linear-gradient(
+    0deg,
+    rgb(255, 119, 115) calc(var(--step) * 1),
+    rgba(255, 237, 95, 1) calc(var(--step) * 2),
+    rgba(168, 255, 95, 1) calc(var(--step) * 3),
+    rgba(131, 255, 247, 1) calc(var(--step) * 4),
+    rgba(120, 148, 255, 1) calc(var(--step) * 5),
+    rgb(216, 117, 255) calc(var(--step) * 6),
+    rgb(255, 119, 115) calc(var(--step) * 7)
+  ) 0% var(--bg-y) / 200% 700%;
+  --diagonal: repeating-linear-gradient(
+    128deg,
+    #0e152e 0%,
+    hsl(180, 10%, 60%) 3.8%,
+    hsl(180, 10%, 60%) 4.5%,
+    hsl(180, 10%, 60%) 5.2%,
+    #0e152e 10%,
+    #0e152e 12%
+  ) var(--bg-x) var(--bg-y) / 300%;
+  --shade: radial-gradient(
+    farthest-corner circle at var(--m-x) var(--m-y),
+    rgba(255, 255, 255, 0.1) 12%,
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0.25) 120%
+  ) var(--bg-x) var(--bg-y) / 300%;
+
+  background: var(--pattern), var(--rainbow), var(--diagonal), var(--shade);
+  background-blend-mode: hue, hue, hard-light, overlay;
+}
+
+.ftos8-holo-card-foil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-repeat: inherit;
+  background-attachment: inherit;
+  background-origin: inherit;
+  background-clip: inherit;
+  background-color: inherit;
+  mix-blend-mode: exclusion;
+  background-size:
+    var(--foil-size),
+    200% 400%,
+    800%,
+    200%;
+  background-position:
+    center,
+    0% var(--bg-y),
+    calc(var(--bg-x) * -1) calc(var(--bg-y) * -1),
+    var(--bg-x) var(--bg-y);
+  background-blend-mode: soft-light, hue, hard-light;
+}
+
+.ftos8-holo-card-float {
+  transform: translateZ(30px);
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.ftos8-holo-card-float img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.ftos8-holo-card:hover {
+  --opacity: 0.6;
+}
+  </style>
+</head>
+<body>
+
+  <div class="ftos8-holo-card">
+    <div class="ftos8-holo-card-inner">
+      <div class="ftos8-holo-card-bg"></div>
+      <div class="ftos8-holo-card-glare"></div>
+      <div class="ftos8-holo-card-foil"></div>
+      <div class="ftos8-holo-card-float">
+        <img src="https://robertipsihi.github.io/docebo/ftos8-academy/diploma_image_technical.png" alt="" />
+      </div>
+      <div class="ftos8-holo-card-content">
+        <img src="https://robertipsihi.github.io/docebo/ftos8-academy/diploma_academy-logo.svg" alt="FintechOS Academy" class="ftos8-holo-card-logo" />
+        <div class="ftos8-holo-card-body">
+          <h3>FintechOS Certified<br>Developer</h3>
+          <p class="ftos8-holo-card-muted">Proudly presented to</p>
+          <p class="ftos8-holo-card-name">Mike Bloom</p>
+          <p class="ftos8-holo-card-muted-light">for completing the FintechOS Certified<br>Professional exam.</p>
+        </div>
+        <div class="ftos8-holo-card-signature">
+          <img src="https://robertipsihi.github.io/docebo/ftos8-academy/diploma_signature.svg" alt="Signature" />
+          <p class="ftos8-font-medium">Teo Blidăruș</p>
+          <p class="ftos8-holo-card-muted">CEO of FintechOS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const card = document.querySelector('.ftos8-holo-card');
+    let isFirstMove = true;
+
+    card.addEventListener('pointerenter', () => {
+      isFirstMove = true;
+    });
+
+    card.addEventListener('pointermove', (e) => {
+      if (isFirstMove) {
+        card.style.transition = '--m-x .2s ease, --m-y .2s ease, --r-x .2s ease, --r-y .2s ease, --bg-x .2s ease, --bg-y .2s ease, --opacity .2s ease';
+        isFirstMove = false;
+        setTimeout(() => { card.style.transition = 'none'; }, 200);
+      }
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const px = x / rect.width;
+      const py = y / rect.height;
+
+      card.style.setProperty('--m-x', (px * 100) + '%');
+      card.style.setProperty('--m-y', (py * 100) + '%');
+      card.style.setProperty('--r-x', (px - 0.5) * 20 + 'deg');
+      card.style.setProperty('--r-y', (py - 0.5) * -20 + 'deg');
+      card.style.setProperty('--bg-x', (px * 100) + '%');
+      card.style.setProperty('--bg-y', (py * 100) + '%');
+      card.style.setProperty('--opacity', '0.6');
+    });
+
+    card.addEventListener('pointerleave', () => {
+      card.style.transition = '--m-x .3s ease, --m-y .3s ease, --r-x .3s ease, --r-y .3s ease, --bg-x .3s ease, --bg-y .3s ease, --opacity .3s ease';
+      card.style.setProperty('--m-x', '50%');
+      card.style.setProperty('--m-y', '50%');
+      card.style.setProperty('--r-x', '0deg');
+      card.style.setProperty('--r-y', '0deg');
+      card.style.setProperty('--bg-x', '50%');
+      card.style.setProperty('--bg-y', '50%');
+      card.style.setProperty('--opacity', '0');
+    });
+  </script>
+
+</body>
+</html>
