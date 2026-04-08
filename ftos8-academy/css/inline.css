@@ -1,0 +1,450 @@
+
+/* ==========================================
+   FintechOS Academy - Inline Style Classes
+   Normally these would be inside some style attributes on the classes themselves for easier maintenance, but because of the way the platform handles custom code, they are kept in a separate .css file to show the inline styles more clearly.
+   ========================================== */
+
+/* ======
+
+General 
+=========================== */
+
+
+
+/* Decorative corners */
+
+/* Decorative border shape - Light (Latest section) */
+.ftos8-i-deco {
+  top: 0;
+  width: 400px;
+  height: 400px;
+  
+  -webkit-mask-image: radial-gradient(circle at 200px 200px, black 0%, transparent 70px);
+  mask-image: radial-gradient(circle at 200px 200px, black 0%, transparent 70px);
+}
+
+.ftos8-i-deco-left {
+  left: 0;
+  transform: translate(-200px, -200px);
+}
+
+.ftos8-i-deco-right {
+  right: 0;
+  transform: translate(200px, -200px);
+}
+
+.ftos8-i-deco-tile {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  width: 160px;
+  height: 160px;
+  border-radius: 32px;
+}
+
+.ftos8-i-deco-light .ftos8-i-deco-tile {
+  border: 1px solid #000000;
+}
+
+.ftos8-i-deco-tile-tl { transform: translate(calc(-100% - -0.5px), calc(-100% - -0.5px)); }
+.ftos8-i-deco-tile-tr { transform: translate(calc(-0.5px), calc(-100% - -0.5px)); }
+.ftos8-i-deco-tile-bl { transform: translate(calc(-100% + 0.5px), -0.5px); }
+.ftos8-i-deco-tile-br { transform: translate(calc(-0.5px), calc(-0.5px)); }
+
+
+/* ======
+
+
+---- Section 1: Hero illsutration on the right ----
+=========================== */
+
+.ftos8-i-tile-grid {
+  --tile-mask: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 40%, black 100%);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/icons_64px_animation_AI.svg);
+  background-size: 64px 64px;
+  background-repeat: repeat;
+  background-position: top center;
+  filter: brightness(0) invert(1);
+  -webkit-mask-image: var(--tile-mask);
+  mask-image: var(--tile-mask);
+}
+
+.ftos8-i-hero-area {
+}
+
+.ftos8-i-ai-icon-lg {
+  width: 32px;
+  height: 32px;
+  top: 40px;
+  left: 0;
+  z-index: 2;
+}
+
+.ftos8-i-ai-icon-sm {
+  width: 16px;
+  height: 16px;
+  top: 28px;
+  left: 28px;
+  z-index: 2;
+}
+
+
+.ftos8-i-hero-photo-1 {
+  top: 0;
+  left: 72px;
+  width: 216px;
+  height: 320px;
+  z-index: 3;
+  background-image: url("https://robertipsihi.github.io/docebo/ftos8-academy/stock_support.jpg");
+}
+
+.ftos8-i-glass-top {
+right: 0;
+    bottom: 0;
+    transform: translate(0, calc(100% + 32px));
+    z-index: 4;
+}
+
+
+.ftos8-i-hero-photo-2 {
+  left: calc(216px + 72px + 32px);;
+  bottom: 0;
+  width: 216px;
+  height: 320px;
+  z-index: 3;
+  background-image: url("https://robertipsihi.github.io/docebo/ftos8-academy/stock_technical.jpg");
+  
+}
+
+.ftos8-i-glass-bottom {
+  left: 0;
+  top: 0;
+  transform: translateY(calc(-100% - 32px));
+  z-index: 4;
+}
+
+
+/* ---- Section 1: spher eblur before section 2  ---- */
+.ftos8-i-sphere-blur {
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  aspect-ratio: 1.5 / 1;
+  background: #ffffff;
+  filter: blur(320px);
+  width: 180%;
+  border-radius: 100%;
+}
+
+
+/* ======
+
+
+ Section 2: Latest 
+=========================== */
+
+.ftos8-i-columns-bg {
+  border-radius: inherit;
+  background: #ffffff;
+  height: 130%;
+}
+
+.ftos8-i-columns-bg .ftos8-i-col {
+  flex: 1;
+  width: auto;
+  max-width: none;
+}
+
+.ftos8-i-col {
+  --ftos8-i-col-width: calc((100vw - (2 * var(--ftos8-space-8)) - (2 * var(--ftos8-section-padding-x)))/9);
+  max-width: calc((var(--ftos8-i-content-max-width) - (2 * var(--ftos8-space-8))) / 9);
+  flex: 0 0 var(--ftos8-i-col-width);
+  width: var(--ftos8-i-col-width);
+}
+
+.ftos8-card-clear .ftos8-i-col {
+  background: linear-gradient(180deg, #fff 50%, #000 50%);
+}
+
+.ftos8-i-col-inner {
+  width: 100%;
+  height: 100%;
+  background: var(--ftos8-gradient-column);
+}
+
+.ftos8-i-col-card-inner {
+  width: 100%;
+  height: 100%;
+  background: var(--ftos8-gradient-column-card);
+}
+
+.ftos8-stack > :nth-child(3) .ftos8-i-col-card-inner {
+  background: var(--ftos8-gradient-column-card);
+}
+
+.ftos8-stack > :nth-child(4) .ftos8-i-col-card-inner {
+  background: var(--ftos8-gradient-column-card);
+}
+
+
+/* Static column padding (pyramid) */
+.ftos8-i-col-1 { padding-bottom: 0; }
+.ftos8-i-col-2 { padding-bottom: 36px; }
+.ftos8-i-col-3 { padding-bottom: 72px; }
+.ftos8-i-col-4 { padding-bottom: 108px; }
+.ftos8-i-col-5 { padding-bottom: 144px; }
+.ftos8-i-col-6 { padding-bottom: 180px; }
+.ftos8-i-col-7 { padding-bottom: 216px; }
+.ftos8-i-col-8 { padding-bottom: 252px; }
+.ftos8-i-col-9 { padding-bottom: 288px; }
+
+/* Breathing column animations (card columns) */
+.ftos8-i-card-breathe-1 { animation: ftos8-breathe-32 4s ease-in-out infinite; }
+.ftos8-i-card-breathe-2 { animation: ftos8-breathe-64 4.25s ease-in-out infinite; }
+.ftos8-i-card-breathe-3 { animation: ftos8-breathe-96 4.5s ease-in-out infinite; }
+.ftos8-i-card-breathe-4 { animation: ftos8-breathe-64 4.75s ease-in-out infinite; }
+.ftos8-i-card-breathe-5 { animation: ftos8-breathe-96 5s ease-in-out infinite; }
+
+
+
+/* White gradient overlay on active card */
+.ftos8-i-card-overlay {
+  top: 0;
+  left: 0;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0));
+  border-radius: inherit;
+}
+
+
+
+
+/* ---- Section 3: Use Cases ---- */
+
+:root {
+  --ftos8-i-video-left: calc(50vw + 1080px / 2 - (4 * var(--ftos8-col-width) + 3 * var(--ftos8-cols-gap)));
+  --ftos8-i-tilt: 15deg;
+}
+
+.ftos8-i-video-wrap {
+  top: 0;
+  bottom: 0;
+  left: var(--ftos8-i-video-left);
+  aspect-ratio: 1 / 1;
+}
+
+.ftos8-i-video-rotate {
+  transform: rotate(var(--ftos8-i-tilt));
+}
+
+.ftos8-i-sphere {
+  position: relative;
+  left: var(--ftos8-i-video-left);
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 3;
+  
+  transform-origin: top left;
+  transform: rotate(var(--ftos8-i-tilt));
+}
+
+.ftos8-i-sphere .ftos8-glass-3-sphere {
+  position: absolute;
+  width: 960px;
+  height: 960px;
+  left: 0;
+  border-radius: 50%;
+}
+
+.ftos8-i-blur-columns {
+  transform: translateX(calc(-6 * 32px));
+  width: fit-content;
+}
+
+.ftos8-i-blur-col {
+  min-width: 32px;
+  flex: 0 0 32px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.001);
+}
+
+.ftos8-i-blur-1 { backdrop-filter: blur(calc(5px / 2)); -webkit-backdrop-filter: blur(45px); }
+
+
+/* ======
+
+---- Video iframe ----
+=========================== */
+
+.ftos8-i-video-iframe {
+  border: none;
+}
+
+.ftos8-i-blur-2 { backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(40px); }
+
+/* Diploma iframe container */
+.ftos8-i-diploma-iframe-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.ftos8-i-diploma-iframe-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+}
+.ftos8-i-blur-3 { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(35px); }
+.ftos8-i-blur-4 { backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(30px); }
+.ftos8-i-blur-5 { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(25px); }
+.ftos8-i-blur-6 { backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(20px); }
+.ftos8-i-blur-7 { backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(15px); }
+.ftos8-i-blur-8 { backdrop-filter: blur(35px); -webkit-backdrop-filter: blur(10px); }
+.ftos8-i-blur-9 { backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(5px); }
+
+/* Heading padding */
+.ftos8-i-heading-pad {
+  padding-left: calc(50vw + 96px - calc(8 * var(--ftos8-col-width) + 7 * var(--ftos8-cols-gap)));
+}
+
+
+
+/* Decorative border shape - Dark (Use cases section) */
+
+@media only screen and (max-width: 56em) {
+  .ftos8-i-sphere-blur {
+    display: none;
+  }
+
+  .ftos8-i-col {
+    --ftos8-i-col-width: calc((100vw - var(--ftos8-space-64)) / 9);
+  }
+
+  .ftos8-card-clear-bg {
+    flex-direction: column;
+  }
+
+  .ftos8-card-clear-bg .ftos8-i-col {
+    flex: 0 0 calc(100% / 3);
+    width: 100%;
+    max-width: none;
+    height: calc(100% / 3);
+  }
+
+  .ftos8-card-clear-thumb .ftos8-i-col {
+    flex: 1;
+    max-width: none;
+    height: 100%;
+  }
+
+  .ftos8-i-thumb-brand {
+    background: var(--ftos8-gradient-icon-brand);
+  }
+
+  .ftos8-i-thumb-teal {
+    background: var(--ftos8-gradient-icon-teal);
+  }
+
+  .ftos8-i-thumb-purple {
+    background: var(--ftos8-gradient-icon-purple);
+  }
+
+  .ftos8-i-video-wrap {
+  left: var(--ftos8-i-video-left);
+}
+
+  .ftos8-i-sphere {
+    left: var(--ftos8-i-video-left);
+  }
+}
+
+@media only screen and (max-width: 56em) {
+  :root {
+    --ftos8-i-video-left: 50%;
+  }
+}
+
+/* Learning paths composed section gradient */
+.ftos8-i-lp-composed-bg {
+  background: linear-gradient(to bottom, transparent var(--ftos8-composed-padding), #000 var(--ftos8-composed-padding));
+}
+
+/* Learning paths hero background */
+.ftos8-i-lp-hero-bg {
+  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/stock_learning-paths.jpg);
+}
+
+/* Certification hero background */
+.ftos8-i-cert-hero-bg {
+  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/stock_certification.jpg);
+}
+
+/* Learning paths card backgrounds */
+.ftos8-i-lp-card-business-bg {
+  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/stock_support.jpg);
+}
+
+.ftos8-i-lp-card-technical-bg {
+  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/stock_technical.jpg);
+}
+
+.ftos8-i-lp-card-sales-bg {
+  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/stock_support.jpg);
+}
+
+/* Certification page */
+.ftos8-i-cert-step-icon {
+  width: 192px;
+  flex-shrink: 0;
+}
+
+.ftos8-i-cert-step-icon img {
+  width: 192px;
+  object-fit: contain;
+}
+
+.ftos8-i-cert-faq-card-bg {
+  background-image: url(https://robertipsihi.github.io/docebo/ftos8-academy/stock_support.jpg);
+}
+
+/* Fan cards — playful tilt + bounce */
+.ftos8-i-fan-cards {
+  --fan-bounce: linear(0, 0.01 0.8%, 0.038 1.6%, 0.154 3.4%, 0.781 9.7%, 1.01 12.5%, 1.089 13.8%, 1.153 15.2%, 1.195 16.6%, 1.219 18%, 1.224 19.7%, 1.208 21.6%, 1.172 23.6%, 1.057 28.6%, 1.007 31.2%, 0.969 34.1%, 0.951 37.1%, 0.953 40.9%, 0.998 50.4%, 1.011 56%, 0.998 74.7%, 1);
+}
+
+.ftos8-i-fan-cards > * {
+  transition: transform 600ms var(--fan-bounce);
+}
+
+.ftos8-i-fan-cards > :nth-child(1) {
+  transform: rotate(-3deg);
+}
+
+.ftos8-i-fan-cards > :nth-child(2) {
+  transform: rotate(1.5deg);
+}
+
+.ftos8-i-fan-cards > :nth-child(3) {
+  transform: rotate(-2deg);
+}
+
+.ftos8-i-fan-cards > :nth-child(4) {
+  transform: rotate(3.5deg);
+}
+
+.ftos8-i-fan-cards > :hover {
+  transform: rotate(0deg) translateY(-8px);
+}
+
+

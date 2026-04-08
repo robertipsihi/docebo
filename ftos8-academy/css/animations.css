@@ -1,0 +1,363 @@
+
+  :root {
+    --ftos8-frost-gradient: repeating-linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0.2) 100%);
+  }
+
+  .ftos8-frosted-container {
+      position: absolute;
+
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .ftos8-frosted-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .ftos8-frosted-background {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .ftos8-frosted-hero-bg {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-size: 100% 100%;
+    z-index: 0;
+  }
+
+  .ftos8-frosted-hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+        background: inherit;
+    z-index: 1;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-size: 100% 100%;
+  }
+
+  .ftos8-frosted-frost {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transform: scale(2) rotate(-16deg);
+    background: var(--ftos8-frost-gradient);
+    background-size: 20px auto;
+    backdrop-filter: blur(20px);
+    mix-blend-mode: color-dodge;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 55%);
+    mask-size: 100% 100%;
+  }
+
+  .ftos8-frosted-space-scene {
+   position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(4, 8, 18, 0) 0%, rgba(4, 8, 18, 0.22) 40%, rgba(2, 5, 12, 0.88) 100%);
+    height: var(--ftos8-composed-padding);
+  }
+
+  .ftos8-frosted-stars {
+    position: absolute;
+    inset: -60% 0 18% 0;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 1;
+  }
+
+  .ftos8-frosted-stars-small {
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.95) 0 1px, transparent 2px),
+      radial-gradient(circle at 72% 24%, rgba(255, 255, 255, 0.85) 0 1px, transparent 2px),
+      radial-gradient(circle at 48% 72%, rgba(255, 255, 255, 0.8) 0 1px, transparent 2px),
+      radial-gradient(circle at 84% 58%, rgba(255, 255, 255, 0.85) 0 1px, transparent 2px),
+      radial-gradient(circle at 28% 46%, rgba(255, 255, 255, 0.7) 0 1px, transparent 2px),
+      radial-gradient(circle at 60% 12%, rgba(255, 255, 255, 0.85) 0 1px, transparent 2px);
+    background-size: 240px 240px;
+    animation: ftos8-stars-drift 70s linear infinite;
+  }
+
+  .ftos8-frosted-stars-medium {
+    background-image:
+      radial-gradient(circle at 18% 30%, rgba(255, 255, 255, 0.95) 0 2px, transparent 4px),
+      radial-gradient(circle at 64% 10%, rgba(255, 255, 255, 0.8) 0 2px, transparent 4px),
+      radial-gradient(circle at 86% 46%, rgba(255, 255, 255, 0.88) 0 2px, transparent 4px),
+      radial-gradient(circle at 38% 62%, rgba(255, 255, 255, 0.75) 0 2px, transparent 4px);
+    background-size: 320px 320px;
+    animation: ftos8-stars-drift 110s linear infinite reverse;
+  }
+
+  .ftos8-frosted-stars-large {
+    background-image:
+      radial-gradient(circle at 25% 14%, rgba(255, 255, 255, 0.95) 0 2px, transparent 4px),
+      radial-gradient(circle at 75% 34%, rgba(255, 255, 255, 0.9) 0 2px, transparent 4px),
+      radial-gradient(circle at 50% 56%, rgba(255, 255, 255, 0.82) 0 2px, transparent 4px);
+    background-size: 480px 480px;
+    animation: ftos8-stars-drift 150s linear infinite;
+  }
+
+  .ftos8-frosted-horizon {
+        width: 100%;
+    height: 50%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) translatey(-50%);
+    border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+
+    opacity: 1;
+    position: absolute;
+    background: #0066ff;
+    filter: blur(40px);
+  }
+
+
+  .ftos8-frosted-horizon::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 0%;
+    border-radius: 100%;
+    background: rgba(188, 255, 249, 0.75);
+    filter: blur(32px);
+    opacity: 1;
+  }
+
+  .ftos8-frosted-horizon-glow {
+ position: absolute;
+    inset: -12% 0 0 0;
+    border-radius: inherit;
+    background: radial-gradient(ellipse at center, rgba(0, 102, 255, 100) 0%, rgba(0, 102, 255, 0) 45%, rgba(0, 102, 255, 100) 75%);
+    filter: blur(120px);
+    opacity: 0.8;
+  }
+
+  .ftos8-frosted-earth {
+width: 120%;
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+    background: linear-gradient(to bottom, rgb(0 0 0 / 30%) 0, rgb(0 0 0));
+    backdrop-filter: blur(4px);
+  }
+
+
+
+
+
+  /* Add this class to a section when you only want the glow layer. */
+  .ftos8-glow {
+    position: relative;
+  }
+
+  .ftos8-glow::before {
+    content: "";
+    position: absolute;
+    left: -20%;
+    right: -20%;
+    top: -48%;
+    height: 90%;
+    border-radius: 0 0 100% 100% / 0 0 100% 100%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(3, 139, 255, 0.62) 0%,
+      rgba(54, 163, 255, 0.36) 42%,
+      rgba(3, 139, 255, 0.06) 68%,
+      rgba(3, 139, 255, 0) 82%
+    );
+    filter: blur(46px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .ftos8-glow > * {
+    position: relative;
+    z-index: 1;
+  }
+
+
+  @keyframes ftos8-stars-drift {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-240px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ftos8-frosted-space-scene {
+      background: linear-gradient(180deg, rgba(4, 8, 18, 0.1) 0%, rgba(2, 5, 12, 0.92) 100%);
+    }
+
+    .ftos8-frosted-horizon {
+      width: 220%;
+      height: 60%;
+      bottom: -16%;
+    }
+
+    .ftos8-frosted-earth {
+      width: 260%;
+      height: 86%;
+      bottom: -44%;
+    }
+  }
+ 
+
+
+
+  /* ==========================================
+   Electric Border Effect for Frost Cards
+   Hover-only activation
+   ========================================== */
+
+:root {
+  --ftos8-electric-border-color: #dd8448;
+  --ftos8-electric-light-color: oklch(from var(--ftos8-electric-border-color) l c h);
+  --ftos8-electric-gradient-color: oklch(from var(--ftos8-electric-border-color) 0.3 calc(c / 2) h / 0.4);
+  --ftos8-electric-neutral-900: oklch(0.185 0 0);
+}
+
+/* SVG filter — hidden, positioned absolute */
+.ftos8-electric-svg {
+  position: absolute;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+/* Electric wrapper — sits around the frost card */
+.ftos8-electric-card {
+  padding: 2px;
+  border-radius: 24px;
+  position: relative;
+  background: transparent;
+  transition: background 0.4s ease;
+}
+
+.ftos8-electric-card:hover {
+  background:
+    linear-gradient(-30deg, var(--ftos8-electric-gradient-color), transparent, var(--ftos8-electric-gradient-color)),
+    linear-gradient(to bottom, var(--ftos8-electric-neutral-900), var(--ftos8-electric-neutral-900));
+}
+
+/* Inner container holds border layers */
+.ftos8-electric-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Animated border — uses SVG turbulence filter */
+.ftos8-electric-border {
+  position: absolute;
+  inset: -2px;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  filter: url(#turbulent-displace);
+  transition: border-color 0.4s ease;
+}
+
+.ftos8-electric-card:hover .ftos8-electric-border {
+  border-color: var(--ftos8-electric-border-color);
+}
+
+/* Glow — blur around border */
+.ftos8-electric-glow {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  filter: blur(4px);
+  transition: border-color 0.4s ease;
+}
+
+.ftos8-electric-card:hover .ftos8-electric-glow {
+  border-color: var(--ftos8-electric-light-color);
+}
+
+/* Overlay 1 — white diagonal glow */
+.ftos8-electric-overlay-1 {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  mix-blend-mode: overlay;
+  transform: scale(1.1);
+  filter: blur(16px);
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(-30deg, white, transparent 30%, transparent 70%, white);
+  transition: opacity 0.4s ease;
+}
+
+.ftos8-electric-card:hover .ftos8-electric-overlay-1 {
+  opacity: 1;
+}
+
+/* Overlay 2 — softer diagonal glow */
+.ftos8-electric-overlay-2 {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  mix-blend-mode: overlay;
+  transform: scale(1.1);
+  filter: blur(16px);
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(-30deg, white, transparent 30%, transparent 70%, white);
+  transition: opacity 0.4s ease;
+}
+
+.ftos8-electric-card:hover .ftos8-electric-overlay-2 {
+  opacity: 0.5;
+}
+
+/* Background glow — colored halo behind card */
+.ftos8-electric-bg-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  filter: blur(32px);
+  transform: scale(1.1);
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(-30deg, var(--ftos8-electric-light-color), transparent, var(--ftos8-electric-border-color));
+  transition: opacity 0.4s ease;
+}
+
+.ftos8-electric-card:hover .ftos8-electric-bg-glow {
+  opacity: 0.3;
+}
+
+/* Ensure frost card inside fills the wrapper */
+.ftos8-electric-card > .ftos8-frost-card {
+  border-radius: 22px;
+  margin: 0;
+}

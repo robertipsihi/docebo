@@ -1,0 +1,283 @@
+/* ==========================================
+   Holographic Diploma Card
+   Standalone styles for iframe embed
+   ========================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: transparent;
+  font-family: InterDisplay, sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* @property declarations */
+@property --m-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --m-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --bg-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --bg-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --r-x {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+@property --r-y {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+@property --opacity {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+/* Card wrapper */
+.ftos8-holo-card {
+  --m-x: 50%;
+  --m-y: 50%;
+  --r-x: 0deg;
+  --r-y: 0deg;
+  --bg-x: 50%;
+  --bg-y: 50%;
+  --foil-size: 40%;
+  --opacity: 0;
+  --radius: 12px;
+  --card-aspect: 4 / 3;
+  --duration: 150ms;
+  --easing: ease-in-out;
+
+  position: relative;
+  isolation: isolate;
+  perspective: 1600px;
+  display: grid;
+  width: 80%;
+  transition: none;
+}
+
+.ftos8-holo-card > * {
+  grid-area: 1/1;
+}
+
+/* Inner — 3D transform container */
+.ftos8-holo-card-inner {
+  position: relative;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  border-radius: var(--radius);
+  container-type: inline-size;
+}
+
+.ftos8-holo-card-inner > *:not(.ftos8-holo-card-bg) {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Background gradient */
+.ftos8-holo-card-bg {
+  background: linear-gradient(135deg, #0065ff 0%, #000 100%);
+  border-radius: var(--radius);
+  aspect-ratio: var(--card-aspect);
+  width: 100%;
+}
+
+/* Content layer */
+.ftos8-holo-card-content {
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translateZ(40px);
+  padding: 5.4cqi;
+  gap: 2.7cqi;
+}
+
+.ftos8-holo-card-logo {
+  height: auto;
+  width: 19.2cqi;
+}
+
+.ftos8-holo-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6cqi;
+}
+
+.ftos8-holo-card-body h3 {
+  font-size: 4.8cqi;
+  line-height: 1.1;
+  font-weight: 400;
+  color: #fff;
+}
+
+.ftos8-holo-card-body p {
+  font-size: 2.04cqi;
+  line-height: 1.4;
+}
+
+.ftos8-holo-card-muted {
+  color: #ffffff70;
+}
+
+.ftos8-holo-card-muted-light {
+  color: #ffffff90;
+}
+
+.ftos8-holo-card-name {
+  font-size: 3cqi;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #fff;
+}
+
+.ftos8-holo-card-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3cqi;
+}
+
+.ftos8-holo-card-signature img {
+  height: auto;
+  width: 16.2cqi;
+  margin-bottom: 0.6cqi;
+}
+
+.ftos8-holo-card-signature p {
+  font-size: 1.92cqi;
+  line-height: 1.4;
+}
+
+.ftos8-holo-card-signature p:last-child {
+  font-size: 1.62cqi;
+}
+
+.ftos8-holo-card-signature .ftos8-font-medium {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Floating layers — Z offsets */
+.ftos8-holo-card-glare {
+  transform: translateZ(10px);
+  mix-blend-mode: soft-light;
+  border-radius: var(--radius);
+  background: radial-gradient(
+    farthest-corner circle at var(--m-x) var(--m-y),
+    rgba(255, 255, 255, 0.8) 10%,
+    rgba(255, 255, 255, 0.65) 20%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  opacity: var(--opacity);
+}
+
+.ftos8-holo-card-foil {
+  transform: translateZ(20px);
+  mix-blend-mode: color-dodge;
+  opacity: var(--opacity);
+  clip-path: inset(0 0 1px 0 round var(--radius));
+  --mask-start: 0%;
+  --mask-end: 80%;
+  -webkit-mask: linear-gradient(to right, transparent var(--mask-start), black var(--mask-end));
+  mask: linear-gradient(to right, transparent var(--mask-start), black var(--mask-end));
+
+  --step: 5%;
+  --pattern: url("/academy/img/pattern.png") center / var(--foil-size);
+  --rainbow: repeating-linear-gradient(
+    0deg,
+    rgb(255, 119, 115) calc(var(--step) * 1),
+    rgba(255, 237, 95, 1) calc(var(--step) * 2),
+    rgba(168, 255, 95, 1) calc(var(--step) * 3),
+    rgba(131, 255, 247, 1) calc(var(--step) * 4),
+    rgba(120, 148, 255, 1) calc(var(--step) * 5),
+    rgb(216, 117, 255) calc(var(--step) * 6),
+    rgb(255, 119, 115) calc(var(--step) * 7)
+  ) 0% var(--bg-y) / 200% 700%;
+  --diagonal: repeating-linear-gradient(
+    128deg,
+    #0e152e 0%,
+    hsl(180, 10%, 60%) 3.8%,
+    hsl(180, 10%, 60%) 4.5%,
+    hsl(180, 10%, 60%) 5.2%,
+    #0e152e 10%,
+    #0e152e 12%
+  ) var(--bg-x) var(--bg-y) / 300%;
+  --shade: radial-gradient(
+    farthest-corner circle at var(--m-x) var(--m-y),
+    rgba(255, 255, 255, 0.1) 12%,
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0.25) 120%
+  ) var(--bg-x) var(--bg-y) / 300%;
+
+  background: var(--pattern), var(--rainbow), var(--diagonal), var(--shade);
+  background-blend-mode: hue, hue, hard-light, overlay;
+}
+
+.ftos8-holo-card-foil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-repeat: inherit;
+  background-attachment: inherit;
+  background-origin: inherit;
+  background-clip: inherit;
+  background-color: inherit;
+  mix-blend-mode: exclusion;
+  background-size:
+    var(--foil-size),
+    200% 400%,
+    800%,
+    200%;
+  background-position:
+    center,
+    0% var(--bg-y),
+    calc(var(--bg-x) * -1) calc(var(--bg-y) * -1),
+    var(--bg-x) var(--bg-y);
+  background-blend-mode: soft-light, hue, hard-light;
+}
+
+.ftos8-holo-card-float {
+  transform: translateZ(30px);
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.ftos8-holo-card-float img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Hover activates foil + glare */
+.ftos8-holo-card:hover {
+  --opacity: 0.6;
+}
